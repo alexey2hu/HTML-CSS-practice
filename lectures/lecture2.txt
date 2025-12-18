@@ -1,0 +1,52 @@
+Что есть:
+	1. Теги: Несемантические/Семантические,
+	2. Примеры глобальной структуры сайта
+
+Несемантические теги:
+	<div>block</div> <!-- Блочный элемент -->
+	<span>inline</span> <!-- Строчный элемент -->
+
+Семантические теги (нужны для роботов-поисковиков и скринридеров):
+<header></header> <!-- Шапка сайта --> 
+	<nav></nav> <!-- Навигация по сайту (неограниченный)-->
+<main></main> <!-- Основная информация сайта -->
+	<article></article> <!-- Логически обособленный блок (неограниченный)-->
+	<section></section> <!-- Часть сайта с определенной общей темой (неограниченный)-->
+<aside></aside> <!-- Второстепенная информация (неограниченный) --> 
+<footer></footer> <!-- Подвал сайта -->
+
+Примеры:
+	Структура 1:
+		<!--
+			<header><nav></nav></header>
+			<aside><nav></nav></aside>
+			<main>
+				<article>
+					<section></section>
+					<section></section>
+				</article>
+			</main>
+			<footer></footer>
+		-->
+	Структура 2:
+		<!--
+		<header><nav></nav></header>
+		<main>
+			<div>
+				<article>
+					<section></section>
+					<section>
+						<div>
+							<article></article>
+							<article></article>
+							<article></article>
+						</div>
+						<div></div>
+					</section>
+				</article>
+				<aside></aside>
+			</div>
+		</main>
+		<footer></footer>
+		-->
+
