@@ -1,0 +1,32 @@
+Что есть:
+	1. Атрибуты (Медиа-контент)
+	2. Теги: Видео, аудио
+
+Атрибуты (Медиа-контент):
+	<video> <audio> controls <!-- Управление плеером (Программируется через js)-->
+	<video> <audio> loop <!-- Зацикливание видео/аудио-->
+	<source> type="contentType/formatType"
+	<!-- Оптимизированное определение формата файла-->
+	<video> <audio> muted <! -- Отключение звука -->
+	<video> autoplay muted <! -- Запуск на фоне (только без звука) -->
+	<video> poster="link" <! -- Превью видео -->
+	<video> preload="none/metadata/auto"
+		<!-- none: Загрузка после кнопки play -->
+		<!-- metadata: Загрузка метаданных сразу -->
+		<!-- auto: Все загружается при старте страницы -->
+
+Теги (Медиа-контент):
+	<!-- Видеоплеер -->
+		<video src='link' controls></video>
+
+	<!-- Предпочтительный формат video (.webm) -->
+	<!-- Но он не поддерживается всеми браузерами -->
+	<!-- Поэтому используем для подбор формата (<source>)-->
+		<video controls loop>
+			<source src=".webm" type="video/webm">
+			<source src=".mp4" type="video/mp4">
+			Не поддерживается видеоплеер
+		</video>
+	
+	<!-- Аудиоплеер -->
+		<audio src='link' controls loop></audio>
