@@ -19,3 +19,6 @@ Alt + arrowDown/arrowUp
 
 Ctrl + S
 <!-- Сохранение + форматирование -->
+
+Ctrl + Shift + Arrow(U, L, D, R)
+<!-- Удобное выделение по словам -->

@@ -1,0 +1,24 @@
+Что есть:
+	1. Пути: Абсолютные
+	2. Пути: Относительные
+	
+Пути (Абсолютные):
+	<a href="https://google.com">Ссылка на гугл</a>
+	<img src="d:/...">
+
+Пути (Относительные):
+	<!-- С текущей папки -->
+		<img src="images/icons/favicon.ico">
+	<!-- С текущей папки (Явное уточнение) -->
+		<img src="./images/icons/favicon.ico">
+
+	<!-- Выход с текущей папки (../) -->
+		<img src="../practice/images/icons/favicon.ico">
+
+	<!-- Css вариант -->
+		.el {
+			background: url("../practice/images/icons/favicon.ico");
+		}
+
+	<!-- От корня проекта (!Лучший вариант для серверов!) -->
+		<img src="/practice/images/icons/favicon.ico">

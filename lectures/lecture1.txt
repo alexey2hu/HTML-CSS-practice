@@ -1,7 +1,11 @@
 Что есть:
-	1. Emmet команды (Базовые),
-	2. Теги: Парные/Непарные,
+	0. Что такое HTML
+	1. Emmet команды (Базовые)
+	2. Теги: Парные/Непарные
 	3. Разбор основы сайта "!"
+
+Что такое HTML:
+	HTML (HyperText Markup Language) — язык разметки для создания и структурирования веб-страниц.
 
 Emmet команды:
 	1. ! - Основа страницы
@@ -19,7 +23,7 @@ Emmet команды:
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Возможность адаптива -->
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<!-- Тег подключения иконки -->
-		<title>PageName</title> <!-- Название страницы -->
+		<title>Название страницы</title>
 	
 	<body></body> <!-- Отображаемая инф-ция страницы -->
 	

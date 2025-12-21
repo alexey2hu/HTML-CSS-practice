@@ -28,7 +28,7 @@
 	<!-- Ссылка с телефоном -->
 		<a href="tel:+79999999999">+7(999)999-99-99</a>
 	<!-- Ссылка с eMail -->
-		<a href="mailto:+79999999999">+7(999)999-99-99</a>
+		<a href="mailto:mail@mail.ru">mail@mail.ru</a>
 	<!-- Кнопка -->
 		<button></button>
 
