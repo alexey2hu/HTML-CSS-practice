@@ -22,3 +22,6 @@ Ctrl + S
 
 Ctrl + Shift + Arrow(U, L, D, R)
 <!-- Удобное выделение по словам -->
+
+Ctrl + Space
+<!-- Предложения Emmet -->

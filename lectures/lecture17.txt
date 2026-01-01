@@ -1,0 +1,55 @@
+Что есть:
+	0. Emmet команды для текстов
+	1. Свойства текстов
+
+
+
+(0) - Emmet команды:
+    c = color: #000;
+    ff = font-family: serif;
+    fz = font-size: ;
+    fw = font-weight: normal;
+    lh = line-height: ;
+    fs = font-style: italic;
+    ta = text-align: left;
+        tar = text-align: right;
+        tac = text-align: center;
+    td = text-decoration: none;
+    ts = text-shadow: hoff voff blur #000;
+    tt = text-transform: uppercase;
+    ti = text-indent: ;
+    lt = letter-spacing: normal;
+    ws = word-spacing: ;
+    wh = white-space: nowrap;
+
+(1) - Свойства текстов:
+    .cls  {
+        /* Цвет */
+        color: #000;
+        /* Шрифты */
+        font-family: serif;
+        /* Размер шрифта */
+        font-size: 16px;
+        /* Жирность шрифта */
+        font-weight: 600;
+        /* Высота строки */
+        line-height: 1;
+        /* Стиль */
+        font-style: italic;
+        /* Центрирование текста */
+        text-align: justify;
+        /* Декорирование текста (линии точки и т.д.) */
+        text-decoration: underline wavy;
+        /* Тень у текста (x y blur-size color) */
+        text-shadow: hoff voff blur #000;
+        /* Режимы регистров */
+        text-transform: uppercase;
+        /* Отступ перед абзацем */
+        text-indent: 20px;
+        /* Отступ между буквами */
+        letter-spacing: 5px;
+        /* Отступ между словами */
+        word-spacing: normal;
+        /* Режим переноса текста */
+        white-space: nowrap;
+    }
