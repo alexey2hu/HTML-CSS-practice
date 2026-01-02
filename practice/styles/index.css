@@ -6,3 +6,16 @@
   font-size: 1.5rem;
   white-space: nowrap;
 }
+
+@font-face {
+  font-family: "FontName";
+  font-weight: 400;
+  font-style: normal;
+  src: 
+    local(Font Name 1),
+    local(Font-Name-alternative),
+    url("/path/to/fonts/example-font.woff2") format("woff2"),
+    url("/path/to/fonts/example-font.woff") format("woff"),
+    url("/path/to/fonts/example-font.eot") format("eot");
+  font-display: fallback;
+}
