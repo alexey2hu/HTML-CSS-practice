@@ -1,30 +1,8 @@
-.cls  {
-  /* Цвет */
-  color: #000;
-  /* Шрифты */
-  font-family: serif;
-  /* Размер шрифта */
-  font-size: 16px;
-  /* Жирность шрифта */
-  font-weight: 600;
-  /* Высота строки */
-  line-height: 1;
-  /* Стиль */
-  font-style: italic;
-  /* Центрирование текста */
-  text-align: justify;
-  /* Декорирование текста (линии точки и т.д.) */
-  text-decoration: underline wavy;
-  /* Тень у текста (x y blur-size color) */
-  text-shadow: hoff voff blur #000;
-  /* Режимы регистров */
-  text-transform: uppercase;
-  /* Отступ перед абзацем */
-  text-indent: 20px;
-  /* Отступ между буквами */
-  letter-spacing: 5px;
-  /* Отступ между словами */
-  word-spacing: normal;
-  /* Режим переноса текста */
+.em3 {
+  font-size: 1.5em;
+  white-space: nowrap;
+}
+.rem4 {
+  font-size: 1.5rem;
   white-space: nowrap;
 }

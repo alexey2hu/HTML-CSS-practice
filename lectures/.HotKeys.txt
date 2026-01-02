@@ -10,9 +10,9 @@ Ctrl + /
 Shift + Alt + arrowDown/arrowUp
 <!-- Скопировать строку по направлению -->
 
-Ctrl + Alt + arrowDown/arrowUp
-Ctrl + LMouseClick
-<!-- Ввод текста в нескольких местах одновременно -->
+Ctrl + Alt + arrowDown/arrowUp,
+Alt + LMouseClick
+<!-- Ввод текста в нескольких местах одновременно (на End можно выровнять при промахе) -->
 
 Alt + arrowDown/arrowUp
 <!-- Перемещение строки целиком с заменой -->
