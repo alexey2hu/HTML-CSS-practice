@@ -56,3 +56,8 @@
             /* swap быстрее всех!!! */
             font-display: swap;
         }
+
+        .el {
+            font-family: "FontName", sans-serif;
+            font-weight: 800;
+        }

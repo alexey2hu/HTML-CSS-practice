@@ -14,13 +14,13 @@
             (Size = (Parent px * em))
 
             .Parent {
-                /* 16px * 1.5 = 24px */
-                font-size: 1.5em;
+                /* 16px * 0.5 = 24px */
+                font-size: .5em;
             }
 
             .Child {
-                /*!!! 24px * 1.5 = 36px */
-                font-size: 1.5em;
+                /*!!! 24px * 0.5 = 36px */
+                font-size: .5em;
             }
 
         /* Берет в учет только свойтсва HTML как главного родители */
