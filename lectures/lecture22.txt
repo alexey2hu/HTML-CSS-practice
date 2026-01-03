@@ -1,2 +1,24 @@
 Что есть:
     1. Свойство position
+
+(1) - Свойство position:
+    .po {
+        /* position (def: static) */
+        position: static;
+
+        /* Позиционируется относительно своего изначального положения */
+        position: relative;
+        /* Позиционируется относительно последнего родителя с relative */
+        position: absolute;
+        /* Позиционируется относительно родителя, но (при касании края viewPort следует за ним) */
+        position: sticky;
+
+
+        /* TRBL (def: auto) */
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
+        /* Высота (def: 0) */
+        z-index: 0;
+    }

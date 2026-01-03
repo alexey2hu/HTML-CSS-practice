@@ -1,10 +1,12 @@
-table {
+.table1 {
   border: 4px solid #999;
-  border-spacing: 0;
-  padding: 0 0 200px 0;
+  padding: 10px 10px 100px 10px;
+  margin: 15%;
+  max-width: 100%;
 }
 
-th {
+.th1 {
+  display: inline-block;
   width: 50px;
   height: 80px;
   box-shadow: inset 0 0 3px 1px #333;
@@ -22,6 +24,8 @@ th {
 
 .th--green {
   background-color: green;
+  position: relative;
+  top: 10px;
 }
 
 .th--blue {
@@ -31,3 +35,4 @@ th {
 .th--purple {
   background-color: purple;
 }
+
