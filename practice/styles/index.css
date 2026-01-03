@@ -1,88 +1,33 @@
-/* (блоки, отступы, особенности блочных и строчных элементов, размеры блоков, границы, тени, прозрачность и тд) */
-
-/* В основном свойства не работают в строчных (INLINE) элементах! */
-
-/* (!!!) box-sizing (def: content-box)(!!!) */
-.bos {
-  /* defaul значение (При padding ширина может привышать максимальную) (width > max_width || width <= max_width) */
-  box-sizing: content-box;
-  /* Лучше так, тогда ширина не может привышать максимальную (width !> max_width) */
-  box-sizing: border-box;
-
-  padding: 10px;
+table {
+  border: 4px solid #999;
+  border-spacing: 0;
+  padding: 0 0 200px 0;
 }
 
-/* (!!!) Отступы padding + margin (!!!) */
-.p-m {
-  /* Входит в размер блока (Внутренний отступ) */
-  padding: 5px;
-  /* Не входит в размер блока (Внений отступ) */
-  margin: 5px;
+th {
+  width: 50px;
+  height: 80px;
+  box-shadow: inset 0 0 3px 1px #333;
+  border-radius: 5px;
 
-  /* Будет окрашен только блок элемента, НЕ margin */
-  background-color: #333;
-
-  /* Коллабс margin: при пересечении происходит наслаивание, а не взаимооталкивание margin свойств разных элементов */
-  /* Отступ margin влияет также на родителя элемента */
-
-  /* Порядок записи: (TRBL)*/
-  /* (padding: all-px) or (padding: top right bottom left) */
-  /* (margin: 5px) or (margin: 0 0.625rem 10px 10px) */
-
-  /* (!!!) на IMG padding работает частисно как margin и не учитывается шириной (!!!) */
 }
 
-/* width + height (def: auto) */
-.w-h {
-  width: 500px;
-  height: 31.25rem;
-
-  /* Нестрогое значение (Зачастую лучше) */
-  min-width: none;
-  max-width: none;
-
-  min-height: none;
-  max-height: none;
+.th--red {
+  background-color: red;
 }
 
-/* overflow (def: visible) */
-.ov {
-  /* Скрывает все за пределами */
-  overflow: hidden;
-  /* Если не помещается, добавляет скролл-бар */
-  overflow: auto;
+.th--orange {
+  background-color: orange;
 }
 
-/* display (def: block/inline) */
-.dp {
-  /* Блочный/строчный элемент - классика */
-  display: block;
-  display: inline;
-  /* Блочный элемент, но не заниет всю ширину родителя */
-  display: inline-block;
+.th--green {
+  background-color: green;
 }
 
-/* border (def: none) */
-.bd {
-  border: 1px solid #000;
-  /* Вкл. в себя */
-  border-width: 1px;
-  border-style: solid;
-  border-color: #333;
+.th--blue {
+  background-color: blue;
 }
 
-/* box-shadow (def: none) */
-.bsh {
-  /* Параметры: x y blur size color */
-  /* Можно дублировать через запятую */
-  box-shadow: 0 0 0 5px #ff7700, 0 0 0 10px #ffc400, 0 0 0 15px #9dff00;
-}
-
-/* opacity/visibility (def: 1/visible) */
-.op-v {
-  /* Прозрачность */
-  opacity: 0.5;
-  /* (visibility) При значении hidden элемент становится невидимым для программ чтения с экрана (скринридеров),
-  а также на него нельзя попасть при навигации с помощью клавиатуры. */
-  visibility: visible;
+.th--purple {
+  background-color: purple;
 }

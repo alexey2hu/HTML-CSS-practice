@@ -1,0 +1,38 @@
+Что есть:
+    1. Параметр: gradient,
+	2. Свойство: backgroung
+
+(1) - Новые свойства:
+    /* ГРАДИЕНТ (linear, radial)*/
+    /* (Градусы, цвет1, цвет2 (% где начнется именно этот цвет), цвет3...) */
+    background: linear-gradient(90deg, #f67676, #76a9f6 20%);
+    background: radial-gradient(#f67676, #76a9f6);
+
+(2) - Параметр: backgroung:
+    .bg {
+        /* (image positionX positionY '/ size' repeat) background (def: none) */  
+        /* (!!!) Через запятую можно указывать еще изображения или цвет фона (!!!) */
+        background: url() 50px 50% / auto no-repeat, #333;
+
+        /* Цвет (hex, rgb, gradient)*/
+        background-color: #fff;
+        /* Изображение (ссылка) */
+        background-image: url();
+        /* Правила ПОВТОРЕНИЯ изображения */
+        background-repeat: no-repeat;
+        /* Позиционирование изображения по x и y */
+        background-position: 0 0;
+
+        /* При fixed ИЗОБРАЖЕНИЕ перемещается внутри своего контейнера вслед за скроллом (def: scroll) */
+        /* При local ИЗОБРАЖЕНИЕ листается при включенном скролле вунтри своего контейнера */
+        /* При scroll КОНТЕНТ ВНУТРИ БЛОКА листается при включенном скролле вунтри своего контейнера */
+        background-attachment: fixed;
+
+        /* При auto имеет фиксированный размер внутри контейнера (def: auto)*/
+        /* При contain пытается растянутся по размеру контейнера, но не может менять пропорции */
+        /* (!!!) При cover растягивает как contain, но может зайти за пределы контейнера (Хорошо работает с position) */
+        background-size: cover;
+
+        /* (Скругление краев) border-radius (def: 0) */
+        border-radius: 5px;
+    }
