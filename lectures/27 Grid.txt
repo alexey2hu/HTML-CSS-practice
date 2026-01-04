@@ -1,7 +1,7 @@
 Что есть:
-    1. display: flex (+Работа с очередями)
+    1. display: grid
 
-(1) - Свойство display:flex:
+(1) - Свойство display:grid:
     .flexbox {
         /* flex работает как block, а inline-flex как строка */
             display: flex;

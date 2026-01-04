@@ -37,8 +37,6 @@ https://www.youtube.com/watch?v=eMhhl1Wq8JA&list=PLJqzTPz6wUNhOvndmD-6WaaNt_b7Dv
 6:38:16 Grid
 
 // Предстоит
-
-
 7:24:41 Псевдоклассы
 7:42:24 Псевдоэлементы
 7:57:50 Ускорение верстки
