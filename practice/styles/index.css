@@ -1,20 +1,70 @@
-.tion {
-  /* Анимация (к чему применить | сколько длится | задержка) */
-  transition: border-radius 2s, background-color 1s 2s;
+body {
+  background: #000;
+}
 
-  /* Включает в себя (К чему применять) */
-  transition-property: border-radius, background-color;
-  /* (Время применения) */
-  transition-duration: 2s, 1s;
-  /* (Задержка перед началом анимации) */
-  transition-delay: 1s, 0s;
+.wrapper {
+  padding: 20px;
+}
 
-  /* Режим анимации (def: ease) */
-  transition-timing-function: ease;
-  /* Ускорение в начале */
-  transition-timing-function: ease-in;
-  /* Ускорение в конце */
-  transition-timing-function: ease-out;
-  /* Гибкие настройки анимации */
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+.container {
+  position: relative;
+  height: 40rem;
+  width: 150px;
+  background: #333;
+
+}
+
+.block {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #fff;
+}
+
+/* ---------------------------------- */
+
+.an{
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  /* (!!!) Анимации можно комюинировать через запятую (!!!) */
+  animation: move-block 2s ease-in infinite alternate,
+  color-block 1s 2s forwards;
+  /* Включает в себя 
+    /* Имя */
+    animation-name: name;
+    /* Время */
+    animation-duration: 0s;
+    /* Режим */
+    animation-timing-function: ease;
+    /* Повторения */
+    animation-iteration-count: infinite;
+    /* Направление и зацикливание */
+    animation-direction: alternate/reverse;
+    /* пауза или продолжение при событиях */
+    animation-play-state: paused;
+    /* Задержка перед проигрываанием, при МИНУСОВОЙ начинается уже перемотанной вперед */
+    animation-delay: -3s;
+    /* Какой кадр до начала и после анимации (при forwards последний кадр остается при завершении) */
+    animation-fill-mode: forwards;
+
+  /* Доп. */
+    /* Перезапуск анимации при событиях */
+    animation-name: none
+}
+
+/* Перемещение + изменение формы */
+@keyframes move-block {
+  0% {
+    bottom: 0%;
+  }
+  100% {
+    bottom: calc(100% - 150px);
+    border-radius: 50%;
+  }
+}
+
+/* Изменение цвета навсегда (forwards) */
+@keyframes color-block {
+  100% {
+    background-color: crimson;
+  }
 }
