@@ -1,42 +1,20 @@
-.tran {
-  /* Смещение по осям (x, y) */
-  transform: translate();
-  /* Включает в себя */
-  transform: translateX(32px, -2rem);
-  transform: translateY();
+.tion {
+  /* Анимация (к чему применить | сколько длится | задержка) */
+  transition: border-radius 2s, background-color 1s 2s;
 
-  /* Вращение (def: rotateZ) */
-  transform: rotate(45deg);
-  /* (Доп. 3D) */
-  transform: rotateX(45deg);
-  transform: rotateY(45deg);
+  /* Включает в себя (К чему применять) */
+  transition-property: border-radius, background-color;
+  /* (Время применения) */
+  transition-duration: 2s, 1s;
+  /* (Задержка перед началом анимации) */
+  transition-delay: 1s, 0s;
 
-  /* Масштабирование (def: all)*/
-  transform: scale(.8);
-  /* (Доп.) (x, y, z) */
-  transform: scale3d(1, .2, .3);
-  transform: scaleX(.8);
-  transform: scaleY(.8);
-  transform: scaleZ(.8);
-
-  /* Наклонение с эффектом перекоса */
-  transform: skew();
-  /* Включает в себя */
-  transform: skewX();
-  transform: skewY();
-
-  /* Точка наложения эффектов transform (x y) (def: center center) */
-  transform-origin: left top;
-}
-
-.rea {
-  position: fixed;
-  top: 30%;
-  left: 50%;
-  background: yellowgreen;
-  opacity: 0.6;
-  width: 300px;
-  height: 300px;
-  transform: rotate(45deg);
-  transform-origin: left top;
+  /* Режим анимации (def: ease) */
+  transition-timing-function: ease;
+  /* Ускорение в начале */
+  transition-timing-function: ease-in;
+  /* Ускорение в конце */
+  transition-timing-function: ease-out;
+  /* Гибкие настройки анимации */
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }

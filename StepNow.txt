@@ -29,13 +29,13 @@ https://www.youtube.com/watch?v=eMhhl1Wq8JA&list=PLJqzTPz6wUNhOvndmD-6WaaNt_b7Dv
 5:05:19 Свойство background
 5:26:27 Свойство position
 5:41:23 Значения transform
+5:51:39 Переходы
 
 // Сейчас на
-5:51:39 Переходы
+6:00:02 Анимации
 
 // Предстоит
 
-6:00:02 Анимации
 6:15:39 Flexbox
 6:38:16 Grid
 

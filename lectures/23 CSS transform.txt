@@ -1,0 +1,34 @@
+Что есть:
+    1. Свойство transform (Основное)
+
+(1) - Свойство transform:
+    .tran {
+        /* Смещение по осям (x, y) */
+        transform: translate();
+        /* Включает в себя */
+        transform: translateX(32px, -2rem);
+        transform: translateY();
+
+        /* Вращение (def: rotateZ) */
+        transform: rotate(45deg);
+        /* (Доп. 3D) */
+        transform: rotateX(45deg);
+        transform: rotateY(45deg);
+
+        /* Масштабирование (def: all)*/
+        transform: scale(.8);
+        /* (Доп.) (x, y, z) */
+        transform: scale3d(1, .2, .3);
+        transform: scaleX(.8);
+        transform: scaleY(.8);
+        transform: scaleZ(.8);
+
+        /* Наклонение с эффектом перекоса */
+        transform: skew();
+        /* Включает в себя */
+        transform: skewX();
+        transform: skewY();
+
+        /* Точка наложения эффектов transform (x y) (def: center center) */
+        transform-origin: left top;
+    }
