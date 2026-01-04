@@ -1,70 +1,71 @@
-body {
-  background: #000;
+
+.flexbox {
+  /* flex работает как block, а inline-flex как строка */
+    display: flex;
+  /* Перенос на следующую строку (def: nowrap) */
+    flex-wrap: wrap;
+
+  /* расположение элементов (def: row) */
+  /* row-reverse - в строку в обратном порядке */
+  /* column - по вертикали */
+    flex-direction: column;
+  
+  /* Расположение контента (def: flex-start) */
+    /* space-evenly - равные отступы от всего */
+    /* space-around - пространство вокуруг элемнта */
+    /* (!T1!) space-between - пространство между элемнтами (!T1!) */
+    justify-content: space-between;
+
+  /* Выравнивание по второстепенной оси (def: stretch) */
+    align-items: center;
 }
 
-.wrapper {
-  padding: 20px;
+.flexbox__item {
+  background: slateblue;
+  padding: 10px;
 }
 
-.container {
-  position: relative;
-  height: 40rem;
-  width: 150px;
-  background: #333;
-
+/* Обращение к первому наследнику */
+.flexbox__item:first-child {
+  order: 3;
+  align-self: self-end;
 }
 
-.block {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background: #fff;
+/* Обращение к любому наследнику по очередности */
+.flexbox__item:nth-child(2) {
+  /* Перемещеие элемента в очереди */
+  order: 2;
+
+  /* Выравнивание по вретикали, но в самих элементах */
+  align-self: center;
+
+  /* flex: flex-grow flex-shrink flex-basis */
+  flex: 1 0 200px;
+
+    /* При 1 заполняет все свободное пространство */
+    flex-grow: 1;
+    /* насколько сжимается при недостатке места в контейнере */
+    flex-shrink: 0;
+    /* Дефолтная ширина элементов (Работает также на child) */
+    flex-basis: 20%;
 }
 
-/* ---------------------------------- */
-
-.an{
-  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-  /* (!!!) Анимации можно комюинировать через запятую (!!!) */
-  animation: move-block 2s ease-in infinite alternate,
-  color-block 1s 2s forwards;
-  /* Включает в себя 
-    /* Имя */
-    animation-name: name;
-    /* Время */
-    animation-duration: 0s;
-    /* Режим */
-    animation-timing-function: ease;
-    /* Повторения */
-    animation-iteration-count: infinite;
-    /* Направление и зацикливание */
-    animation-direction: alternate/reverse;
-    /* пауза или продолжение при событиях */
-    animation-play-state: paused;
-    /* Задержка перед проигрываанием, при МИНУСОВОЙ начинается уже перемотанной вперед */
-    animation-delay: -3s;
-    /* Какой кадр до начала и после анимации (при forwards последний кадр остается при завершении) */
-    animation-fill-mode: forwards;
-
-  /* Доп. */
-    /* Перезапуск анимации при событиях */
-    animation-name: none
+.flexbox__item:nth-child(3) {
+  order: 1;
+  align-self: self-start;
+  width: calc(100% - 20px)
 }
 
-/* Перемещение + изменение формы */
-@keyframes move-block {
-  0% {
-    bottom: 0%;
-  }
-  100% {
-    bottom: calc(100% - 150px);
-    border-radius: 50%;
-  }
-}
 
-/* Изменение цвета навсегда (forwards) */
-@keyframes color-block {
-  100% {
-    background-color: crimson;
-  }
+
+.flexbox__item-content {
+  background: midnightblue;
+  min-width: 50px;
+  min-height: 50px;
+
+  line-height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
 }

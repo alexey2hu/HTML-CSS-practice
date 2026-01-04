@@ -1,0 +1,48 @@
+Что есть:
+    1. Свойство animation
+    2. Анимирование - @keyframes
+
+(1) - Свойство animation:
+    .flexbox {
+        /* flex работает как block, а inline-flex как строка */
+            display: flex;
+        /* Перенос на следующую строку (def: nowrap) */
+            flex-wrap: wrap;
+
+        /* расположение элементов (def: row) */
+        /* row-reverse - в строку в обратном порядке */
+        /* column - по вертикали */
+            flex-direction: column;
+        
+        /* Расположение контента (def: flex-start) */
+            /* space-evenly - равные отступы от всего */
+            /* space-around - пространство вокуруг элемнта */
+            /* (!T1!) space-between - пространство между элемнтами (!T1!) */
+            justify-content: space-between;
+
+        /* Выравнивание по второстепенной оси (def: stretch) */
+            align-items: center;
+    }
+
+    /* Обращение к первому наследнику */
+    .flexbox__item:first-child {
+        /* Перемещеие элемента в очереди */
+            order: 3;
+        /* Выравнивание по вретикали, но в самих элементах */
+            align-self: self-end;
+    }
+
+    /* Обращение к любому наследнику по очередности */
+    .flexbox__item:nth-child(2) {
+        order: 2;
+
+        /* flex: flex-grow flex-shrink flex-basis */
+            flex: 1 0 200px;
+
+            /* При 1 заполняет все свободное пространство */
+            flex-grow: 1;
+            /* Насколько сжимается при недостатке места в контейнере */
+            flex-shrink: 0;
+            /* Дефолтная ширина элементов (Работает также на child) */
+            flex-basis: 20%;
+    }
