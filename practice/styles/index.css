@@ -1,36 +1,42 @@
-.table1 {
-  border: 4px solid #999;
-  padding-bottom: 9rem;
-  margin: 15%;
+.tran {
+  /* Смещение по осям (x, y) */
+  transform: translate();
+  /* Включает в себя */
+  transform: translateX(32px, -2rem);
+  transform: translateY();
+
+  /* Вращение (def: rotateZ) */
+  transform: rotate(45deg);
+  /* (Доп. 3D) */
+  transform: rotateX(45deg);
+  transform: rotateY(45deg);
+
+  /* Масштабирование (def: all)*/
+  transform: scale(.8);
+  /* (Доп.) (x, y, z) */
+  transform: scale3d(1, .2, .3);
+  transform: scaleX(.8);
+  transform: scaleY(.8);
+  transform: scaleZ(.8);
+
+  /* Наклонение с эффектом перекоса */
+  transform: skew();
+  /* Включает в себя */
+  transform: skewX();
+  transform: skewY();
+
+  /* Точка наложения эффектов transform (x y) (def: center center) */
+  transform-origin: left top;
 }
 
-.th1 {
-  display: inline-block;
-  width: 6rem;
-  height: 9rem;
-  box-shadow: inset 0 0 3px 1px #333;
-  border-radius: 5px;
-  gap: 0 ;
-
+.rea {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  background: yellowgreen;
+  opacity: 0.6;
+  width: 300px;
+  height: 300px;
+  transform: rotate(45deg);
+  transform-origin: left top;
 }
-
-.th--red {
-  background-color: red;
-}
-
-.th--orange {
-  background-color: orange;
-}
-
-.th--green {
-  background-color: green;
-}
-
-.th--blue {
-  background-color: blue;
-}
-
-.th--purple {
-  background-color: purple;
-}
-

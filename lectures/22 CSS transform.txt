@@ -1,0 +1,8 @@
+Что есть:
+    1. Свойство transform (Основные)
+
+(1) - Свойство transform:
+    .tran {
+        /* position (def: static) */
+        position: static;
+    }
