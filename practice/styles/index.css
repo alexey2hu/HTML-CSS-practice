@@ -1,1 +1,159 @@
+body {
+  background-color: black;
+}
+
+.wrapper {
+  padding: 50px;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.dg {
+ margin-bottom: 200px;
+ padding-bottom: 200px;
+ border-radius: 10px solid #363636;
+ min-height: 100vh;
+}
+
+.item {
+  color: white;
+  border: 5px dashed #333;
+  font-size: 40px;
+  padding: .8em;
+  text-align: center;
+}
+
 /* Отличие Grid от Flex в том, что grid может управлять одновременно 2 осями элементов */
+/* (1) - grid-template (Строки и колонки): */
+  .dg {
+  /* grid работает как block, а inline-grid работает как строка */
+    display: grid;
+    
+    /* (!!!) 2 строки / 3 колонки */
+    grid-template: auto auto / repeat(1, 200px) minmax(100px, 1fr) fit-content(100px);
+    /* Вкл. в себя */
+      /* Создание 2 строк (Размер для создания) */
+        grid-template-rows: auto auto;
+      /* Создание 3 колонок (Размер для создания) */
+          /* fr (Доля) - забирет выделенное пространство себе */
+        /* repeat(сколько, размер) - создает несколько колонок с одинаковыми параметрами */
+        /* minmax - нестрогое (адаптивное) значение */
+        /* fit-content() - это auto с ограничением по max */
+        grid-template-columns: repeat(1, 200px) minmax(100px, 1fr) fit-content(100px);
+  }
+/* (2) - grid-template (Области): */
+  .dg {
+    display: grid;
+    /* 3 строки / 2 колонки (!!! Вараинт с areas !!!)*/
+    grid-template: 
+      "header header" 1fr
+      "main aside" 5fr
+      "footer footer" 2fr
+      / 1fr 300px;
+    /* Вкл. в себя */
+      /* grid-template-areas:
+      (Повторяет сетку grid и по именам располагает также области) */
+      grid-template-areas: 
+        "header header"
+        "main aside"
+        "footer footer";
+  }
+
+  /* grid-area: name (Задает имена для областей) */
+  .dg__item--heder {
+    grid-area: header;
+  }
+  .dg__item--main {
+    grid-area: main;
+  }
+  .dg__item--aside {
+    grid-area: aside;
+  }
+  .dg__item--footer {
+    grid-area: footer;
+  }
+
+/* (3) - Неявная сетка: */
+  /* Если элемент не попадает в указанные области сетки grid,
+    для него генерируется отдельная ячейка - тем самым он попадет в неявную сетку */
+  .dg {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+
+    /* Определяет алгоритм автоматического размещения элементов в сетке (def: row)*/
+    /* row, column, dense (Стороки, колонки или плотный(заполняет все пропущенное прстранство)) */
+    grid-auto-flow: dense;
+
+    /* Управляет атвоматически созданными (неявными) СТРОКАМИ */
+    grid-auto-rows: 300px;
+    /* Управляет автоматически созданными (неявными) КОЛОНКАМИ */
+    grid-auto-columns: auto;
+  }
+
+/* (4) - Работа конкретно с элементами: */
+  /* При обращении к конкретной ячейчке можно явно указать сколько пространства она должна занимать */
+  .dg {
+    display: grid;
+    /* Создание с заданными именами линий */
+    /* [name] size ... */
+    grid-template:
+    [row1] 1fr [row2] 1fr [row3]
+    / [col1] 1fr [col2] 1fr [col3] 1fr [col4];
+    grid-auto-flow: column;
+  }
+
+  .dg__item--5 {
+   /* Занимаемые строки: От / До */
+      grid-row: 1 / 2;
+      /* Вкл. в себя */
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+   /* Занимаемые колонки: От / До (Способ через имена) */
+      grid-column: col2 / col4;
+      /* Вкл. в себя */
+        grid-column-start: col2;
+        grid-column-end: col4;
+  }
+
+/* (5) - Доп.:  */
+ .dg {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    
+    /* def: Выравниавание по горизонтали (def: stretch (Максимально растягивает)) */
+    justify-items: center;
+    /* def: Выравниавание по вертикали (def: stretch (Максимально растягивает)) */
+    align-items: center;
+
+    /* Отступы (строка колонка) или (общий отступ) */
+    grid-gap: 20px 10%;
+    /* Вкл. в себя */
+      /* Отступы между строками */
+      row-gap: 20px;
+      /* Отступы между колонками */
+      column-gap: 10%;
+  }
+
+/* Пример смены порядка с помощью order */
+.dg__item--1 {
+  order: 1;
+
+  /* def: Выравниавание по горизонтали (Через сам элемент)) */
+  justify-self: stretch;
+  /* def: Выравниавание по вертикали (Через сам элемент)) */
+  align-self: start;
+}
+.dg__item--2 {
+  order: 3;
+
+  justify-self: center;
+  align-self: stretch;
+}
+.dg__item--3 {
+  order: 2;
+}
