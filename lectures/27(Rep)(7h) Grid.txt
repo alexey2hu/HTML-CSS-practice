@@ -1,3 +1,5 @@
+(!!!) Повторение и практика: https://cssgridgarden.com/#ru
+
 Что есть:
     0. Отличие grid от Flex
     1. Строки и колонки
@@ -43,7 +45,8 @@
         "footer footer";
   }
 
-  /* grid-area: name (Задает имена для областей) */
+  /* grid-area: name (Задает имена для областей)
+    (!!!) Также можно передавать значени row и col в формате( grid-area: 1 (rs) / 1 (cs) / 3 (re) / 6 (ce)) */
   .dg__item--heder {
     grid-area: header;
   }
@@ -87,13 +90,13 @@
   }
 
   .dg__item--5 {
-   /* Занимаемые строки: От / До */
-      grid-row: 1 / 2;
+    /* Занимаемые строки: От / До (При отрицательном значении считает с конца)*/
+      grid-row: 1 / -2;
       /* Вкл. в себя */
         grid-row-start: 1;
-        grid-row-end: 2;
+        grid-row-end: -2;
 
-   /* Занимаемые колонки: От / До (Способ через имена) */
+    /* Занимаемые колонки: От / До (Способ через имена) */
       grid-column: col2 / col4;
       /* Вкл. в себя */
         grid-column-start: col2;
@@ -106,17 +109,17 @@
     grid-template: auto / repeat(3, 1fr);
     
     /* def: Выравниавание по горизонтали (def: stretch (Максимально растягивает)) */
-    justify-items: center;
+      justify-items: center;
     /* def: Выравниавание по вертикали (def: stretch (Максимально растягивает)) */
-    align-items: center;
+      align-items: center;
 
     /* Отступы (строка колонка) или (общий отступ) */
-    grid-gap: 20px 10%;
+      grid-gap: 20px 10%;
     /* Вкл. в себя */
       /* Отступы между строками */
-      row-gap: 20px;
+        row-gap: 20px;
       /* Отступы между колонками */
-      column-gap: 10%;
+        column-gap: 10%;
   }
 
 /* Пример смены порядка с помощью order */
