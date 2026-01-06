@@ -1,14 +1,14 @@
 Что есть:
-    1. Параметр: gradient,
+    1. Значение: gradient,
 	2. Свойство: backgroung
 
-(1) - Новые свойства:
+(1) - Значение: gradient:
     /* ГРАДИЕНТ (linear, radial)*/
     /* (Градусы, цвет1, цвет2 (% где начнется именно этот цвет), цвет3...) */
     background: linear-gradient(90deg, #f67676, #76a9f6 20%);
     background: radial-gradient(#f67676, #76a9f6);
 
-(2) - Параметр: backgroung:
+(2) - Свойство: backgroung:
     .bg {
         /* (image positionX positionY '/ size' repeat) background (def: none) */  
         /* (!!!) Через запятую можно указывать еще изображения или цвет фона (!!!) */

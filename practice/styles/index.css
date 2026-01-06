@@ -157,3 +157,10 @@ body {
 .dg__item--3 {
   order: 2;
 }
+
+.block::first-letter {
+  position: absolute;
+  top: 200px;
+  left: 12.5rem;
+  height: auto;
+}
