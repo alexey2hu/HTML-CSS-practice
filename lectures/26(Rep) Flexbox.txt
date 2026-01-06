@@ -2,48 +2,51 @@
 
 Что есть:
     1. display: flex (+Работа с очередями)
+    2. Объединение свойств
 
 (1) - Свойство display:flex:
-    .flexbox {
-        /* flex работает как block, а inline-flex как строка */
-            display: flex;
-        /* Перенос на следующую строку (def: nowrap) */
-            flex-wrap: wrap;
-
-        /* расположение элементов (def: row) */
-        /* row-reverse - в строку в обратном порядке */
-        /* column - по вертикали */
-            flex-direction: column;
-        
-        /* Расположение контента (def: flex-start) */
-            /* space-evenly - равные отступы от всего */
-            /* space-around - пространство вокуруг элемнта */
-            /* (!T1!) space-between - пространство между элемнтами (!T1!) */
+    /* flex работает как block, а inline-flex как строка */
+        display: flex;
+    
+        /* space-evenly - равные отступы от всего (def: flex-start)*/
+        /* space-around - пространство вокуруг элемнта */
+        /* space-between - пространство между элемнтами */
             justify-content: space-between;
 
-        /* Выравнивание по второстепенной оси (def: stretch) */
+        /* Выравнивание по второстепенной оси всех наследников (def: stretch) */
             align-items: center;
-    }
+        /* Выравнивание второстепенной оси, но в самих элементах */
+            align-self: self-end;
+        /* Режим отступа между элементами */
+            align-content: space-between
+
 
     /* Обращение к первому наследнику */
     .flexbox__item:first-child {
         /* Перемещеие элемента в очереди */
             order: 3;
-        /* Выравнивание по вретикали, но в самих элементах */
-            align-self: self-end;
     }
 
     /* Обращение к любому наследнику по очередности */
-    .flexbox__item:nth-child(2) {
-        order: 2;
+    .flexbox__item:nth-child(2) {}
 
-        /* flex: flex-grow flex-shrink flex-basis */
-            flex: 1 0 200px;
+(2) - Объединение свойств:
+    /* flex: flex-grow flex-shrink flex-basis */
+        flex: 1 0 200px;
 
-            /* При 1 заполняет все свободное пространство */
-            flex-grow: 1;
-            /* Насколько сжимается при недостатке места в контейнере */
-            flex-shrink: 0;
-            /* Дефолтная ширина элементов (Работает также на child) */
-            flex-basis: 20%;
-    }
+        /* При 1 заполняет все свободное пространство */
+        flex-grow: 1;
+        /* Насколько сжимается при недостатке места в контейнере */
+        flex-shrink: 0;
+        /* Дефолтная ширина элементов (Работает также на child) */
+        flex-basis: 20%;
+
+    /* flex-flow: flex-wrap flex-direction*/
+        flex-flow: wrap-reverse column-reverse;
+
+        /* Перенос на следующую строку (def: nowrap) */
+        flex-wrap: wrap-reverse;
+        /* расположение элементов (def: row) */
+        flex-direction: row-reverse;
+
+
