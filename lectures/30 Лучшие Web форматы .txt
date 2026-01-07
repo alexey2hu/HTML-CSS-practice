@@ -1,0 +1,30 @@
+Images:
+    (!!!) Приоритетность форматов:
+        AVIF → WebP → JPG → PNG (только для прозрачности без WebP)
+        SVG для логотипов, иконок, графики
+
+    Логотипы: только SVG + alt
+    Иконки: inline SVG или SVG-sprite
+    Фотографии: WebP с JPG fallback через <picture>
+    Retina: srcset с 1x, 2x
+
+    Пример:
+        <picture>
+            <source srcset="img.webp" type="image/webp">
+            <img src="img.jpg" alt="" loading="lazy">
+        </picture>
+
+Fonts:
+    (!!!) WOFF2 → WOFF (только fallback)
+    
+    Переменные шрифты (один файл вместо нескольких)
+    Обязательно: font-display: swap
+    Опционально: preload критичных шрифтов
+
+Video:
+    (!!!) WebM (VP9) → MP4 (H.264)
+
+    Не использовать: GIF (заменять на видео)
+
+Audio:
+    (!!!) Opus/WebM → MP3

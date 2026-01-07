@@ -51,6 +51,8 @@
             local(Font-Name-alternative),
             url("/path/to/fonts/example-font.woff2") format("woff2"),
             url("/path/to/fonts/example-font.woff") format("woff"),
+
+            /* Нет необходимости: (IE8-10: < 0.5% пользователей) +Старый IE воспринимает только перый шрифт */
             url("/path/to/fonts/example-font.eot") format("eot");
             
             /* swap быстрее всех!!! */
