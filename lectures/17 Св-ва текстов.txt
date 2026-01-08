@@ -23,7 +23,7 @@
     wh = white-space: nowrap;
 
 (1) - Свойства текстов:
-    .cls  {
+    .clss  {
         /* Цвет */
         color: #000;
         /* Шрифты */

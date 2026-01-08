@@ -1,0 +1,45 @@
+/* -------------- Основа CSS -------------- */
+/* Переменные */
+:root {
+    --container-width: 1200px;
+    --container-padding: 15px;
+
+    --font-main: 'Inter', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+
+    --color-primary: #ea0069;
+    --color-secondary: #03dabd;
+    --color-text: #000000;
+    --color-bg: #ffffff;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Контейнеры */
+.wrapper {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink: 0;
+}

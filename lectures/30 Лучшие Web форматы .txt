@@ -3,7 +3,7 @@ Images:
         AVIF → WebP → JPG → PNG (только для прозрачности без WebP)
         SVG для логотипов, иконок, графики
 
-    Логотипы: только SVG + alt
+    Логотипы: только SVG + alt (SVG (основной) → PNG 32x32 (fallback) → Apple Touch Icon)
     Иконки: inline SVG или SVG-sprite
     Фотографии: WebP с JPG fallback через <picture>
     Retina: srcset с 1x, 2x

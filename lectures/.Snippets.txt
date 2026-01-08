@@ -1,0 +1,140 @@
+// My snippets:
+{
+    //HTML:
+
+    "HTML основа сайта": {
+        "scope": "html, php",
+        "prefix": "!html",
+        "body": [
+            "<!DOCTYPE html>",
+            "<html lang=\"ru\" dir=\"ltr\">",
+            "<head>",
+            "\t<meta charset=\"UTF-8\">",
+            "\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+            "\t<meta name=\"description\" content=\"${1:Описание сайта}\">",
+            "\t<title>${2:Название сайта}</title>",
+            "\t<!-- Favicon для браузеров -->",
+            "\t<link rel=\"icon\" href=\"images/icons/favicon.svg\" type=\"image/svg+xml\">",
+            "\t<link rel=\"icon\" href=\"images/icons/favicon-32.png\" type=\"image/png\" sizes=\"32x32\">",
+            "\t<!-- Favicon для iOS -->",
+            "\t<link rel=\"apple-touch-icon\" href=\"images/icons/apple-touch-icon-180.png\" sizes=\"180x180\">",
+            "\t<link rel=\"apple-touch-icon\" href=\"images/icons/apple-touch-icon-152.png\" sizes=\"152x152\">",
+            "\t<!-- CSS -->",
+            "\t<link rel=\"stylesheet\" href=\"css/reset.css\">",
+            "\t<link rel=\"stylesheet\" href=\"css/fonts.css\">",
+            "\t<link rel=\"stylesheet\" href=\"css/style.css\">",
+            "</head>",
+            "<body>",
+            "\t<div class=\"wrapper\">",
+            "\t\t<header class=\"header\">${3}</header>",
+            "\t\t<main class=\"main\">",
+            "\t\t\t<div class=\"container\">${4}</div>",
+            "\t\t</main>",
+            "\t\t<footer class=\"footer\">${5}</footer>",
+            "\t</div>",
+            "\t<script src=\"js/main.js\" defer></script>",
+            "</body>",
+            "</html>"
+        ],
+        "description": "HTML основа сайта"
+    },
+
+    //CSS:
+
+    // Style.css:
+    "CSS основа сайта": {
+        "scope": "css, scss",
+        "prefix": "!css-base",
+        "body": [
+            "/* -------------- Основа CSS -------------- */",
+            "/* Переменные */",
+            ":root {",
+            "\t--container-width: 1200px;",
+            "\t--container-padding: 15px;",
+            "",
+            "\t--font-main: 'Inter', sans-serif;",
+            "\t--font-secondary: 'Roboto', sans-serif;",
+            "",
+            "\t--color-primary: #ea0069;",
+            "\t--color-secondary: #03dabd;",
+            "\t--color-text: #000000;",
+            "\t--color-bg: #ffffff;",
+            "}",
+            "",
+            "body {",
+            "\tfont-family: var(--font-main);",
+            "\tcolor: var(--color-text);",
+            "\tbackground-color: var(--color-bg);",
+            "\tline-height: 1.5;",
+            "\t-webkit-font-smoothing: antialiased;",
+            "}",
+            "",
+            "/* Контейнеры */",
+            ".wrapper {",
+            "\tmin-height: 100vh;",
+            "\tmin-height: 100dvh;",
+            "\tdisplay: flex;",
+            "\tflex-direction: column;",
+            "}",
+            "",
+            ".container {",
+            "\tmax-width: var(--container-width);",
+            "\tpadding: 0 var(--container-padding);",
+            "\tmargin: 0 auto;",
+            "\twidth: 100%;",
+            "}",
+            "",
+            ".main {",
+            "\tflex: 1 0 auto;",
+            "}",
+            "",
+            ".footer {",
+            "\tflex-shrink: 0;",
+            "}"
+        ],
+        "description": "Базовые стили сайта (переменные, контейнеры)"
+    },
+
+	// Reset.css:
+    "Сброс стилей браузера": {
+        "scope": "css, scss",
+        "prefix": "!reset",
+        "body": [
+            "*{padding: 0;margin: 0;border: 0;}",
+            "*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}",
+            ":focus,:active{outline: none;}",
+            "a:focus,a:active{outline: none;}",
+            "nav,footer,header,aside{display: block;}",
+            "html,body{height:100%;width:100%;font-size:100%;line-height:1;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}",
+            "input,button,textarea{font-family:inherit;}",
+            "input::-ms-clear{display: none;}",
+            "button{cursor: pointer;}",
+            "button::-moz-focus-inner{padding:0;border:0;}",
+            "a,a:visited{text-decoration: none;}",
+            "a:hover{text-decoration: none;}",
+            "ul li{list-style: none;}",
+            "img{vertical-align: top;}",
+            "h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}",
+            "a{color:inherit;}"
+        ],
+        "description": "Сброс стилей браузера"
+    },
+
+	// Fonts.css:
+    "Подключение шрифта": {
+		"scope": "css, scss",
+        "prefix": "!fonts",
+        "body": [
+            "@font-face {",
+            "\tfont-family: '${1}';",
+            "\tfont-weight: ${2|400,700,900|};",
+            "\tfont-style: ${3|normal,italic|};",
+            "\tsrc: local('${1}'),",
+			"\t\turl('../fonts/${1}-${4|Regular,Bold,Medium,Light,Black|}.woff2') format('woff2'),",
+            "\t\turl('../fonts/${1}-${4}.woff') format('woff');",
+            "\tfont-display: swap;",
+            "}"
+        ],
+        "description": "Подключение шрифта"
+    },
+}
