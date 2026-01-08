@@ -1,29 +1,90 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Описание сайта">
-  <title>CreateX</title>
-  <!-- Favicon для браузеров -->
-  <link rel="icon" href="images/icons/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="images/icons/favicon-32.png" type="image/png" sizes="32x32">
-  <!-- Favicon для iOS -->
-  <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-180.png" sizes="180x180">
-  <link rel="apple-touch-icon" href="images/icons/apple-touch-icon-152.png" sizes="152x152">
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <div class="wrapper">
-    <header class="header"></header>
-    <main class="main">
-      <div class="container"></div>
-    </main>
-    <footer class="footer"></footer>
-  </div>
-  <script src="js/main.js" defer></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Описание сайта" />
+    <title>CreateX</title>
+    <!-- Favicon для браузеров -->
+    <link rel="icon" href="images/icons/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="images/icons/favicon-32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <!-- Favicon для iOS -->
+    <link
+      rel="apple-touch-icon"
+      href="images/icons/apple-touch-icon-180.png"
+      sizes="180x180"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="images/icons/apple-touch-icon-152.png"
+      sizes="152x152"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__top-inner">
+              <div class="header__logo logo">
+                <img src="images/logos/createX-logo.svg" alt="CreateX-logo" />
+              </div>
+              <nav class="header__nav">
+                <ul class="header__nav-list">
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">About Us</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Courses</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Events</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Blog</a>
+                  </li>
+                  <li class="header__nav-item">
+                    <a class="header__nav-link" href="#">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="header__btn-box">
+                <button class="header__consulation-button button">
+                  Get consultation
+                </button>
+
+                <div class="header__user-container">
+                  <img src="images/icons/Person.svg" alt="user-in" />
+                  <button class="header__log-in user-button">
+                    Log in
+                  </button>
+                  <span> / </span>
+                  <button class="header__register user-button">
+                    Register
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__body">
+          <div class="container"></div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="container"></div>
+      </main>
+      <footer class="footer"></footer>
+    </div>
+    <script src="js/main.js" defer></script>
+  </body>
 </html>
