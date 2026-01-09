@@ -4,8 +4,6 @@
   --container-width: 1200px;
   --container-padding: 15px;
 
-  --font-family: "Lato", sans-serif;
-
   --primary: #ff3f3a;
   --secondary: #ffcf2d;
   --success: #03cea4;
@@ -23,9 +21,9 @@
 }
 
 body {
+  font-family: Lato, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  overflow: hidden;
 }
 
 /* Контейнеры */
@@ -51,84 +49,104 @@ body {
   flex-shrink: 0;
 }
 
+.logo {
+}
+
 /* повторяемые блоки */
 .button {
   background: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
   padding: 1rem 2.25rem;
   border-radius: 4px;
 
-  font-family: var(--font-family);
   font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03rem;
   color: white;
+
+  transition: .3s;
 }
 
-.logo {
+.button:hover {
+  transform: scale(1.1);
 }
 
 /* -------------- header -------------- */
-/* header-top */
-
 .header {
+  font-weight: 700;
 }
+
+/* header__top */
 .header__top {
   width: 100%;
   margin: 1.25rem 0;
   height: 3.25rem;
+
+  white-space: nowrap;
 }
+
 .header__top-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .header__logo {
   margin-right: 3.75rem;
 }
+
 .header__nav {
   margin-right: auto;
 }
+
 .header__nav-list {
   display: flex;
   align-items: center;
   gap: 2.5rem;
 }
+
 .header__nav-item {
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 1rem;
   line-height: 1.6rem;
   color: var(--gray-800);
 }
+
 .header__nav-link {
+  transition: color .3s;
 }
+
 .header__btn-box {
   display: flex;
   align-items: center;
   gap: 2.25rem;
 }
+
 .header__consulation-button {
 }
+
 .header__user-container {
-    display: flex;
-    align-items: center;
-    height: 1.25rem;
-    fill: var(--gray-800);
-    white-space: nowrap;
+  fill: var(--gray-800);
+  vertical-align: middle;
 }
+
 .header__user-container img {
-    margin-right: .625rem;
+  margin-right: .625rem;
 }
-.header__log-in {
-}
+
 .user-button {
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 1rem;
   line-height: 1.6rem;
   color: var(--gray-800);
+  transition: color .3s;
 }
-.header__register {
+
+.header__user-container img,
+.user-button,
+.header__user-container span {
+    vertical-align: middle;
 }
+
+.header__nav-link:hover,
+.user-button:hover {
+  color: var(--primary);
+}
+
+/* header__body */
 .header__body {
 }
