@@ -1,52 +1,52 @@
 /* -------------- Основа CSS -------------- */
 /* Переменные */
 :root {
-  --container-width: 1200px;
-  --container-padding: 15px;
+	--container-width: 1200px;
+	--container-padding: 15px;
 
-  --primary: #ff3f3a;
-  --secondary: #ffcf2d;
-  --success: #03cea4;
-  --danger: #ff4242;
-  --warning: #f89828;
-  --info: #5a87fc;
-  --gray-900: #1e212c;
-  --gray-800: #424551;
-  --gray-700: #787a80;
-  --gray-600: #9a9ca5;
-  --gray-500: #b3b7bc;
-  --gray-400: #d7dadd;
-  --gray-300: #e5e8ed;
-  --gray-200: #f4f5f6;
+	--primary: #ff3f3a;
+	--secondary: #ffcf2d;
+	--success: #03cea4;
+	--danger: #ff4242;
+	--warning: #f89828;
+	--info: #5a87fc;
+	--gray-900: #1e212c;
+	--gray-800: #424551;
+	--gray-700: #787a80;
+	--gray-600: #9a9ca5;
+	--gray-500: #b3b7bc;
+	--gray-400: #d7dadd;
+	--gray-300: #e5e8ed;
+	--gray-200: #f4f5f6;
 }
 
 body {
-  font-family: Lato, sans-serif;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+	font-family: Lato, sans-serif;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
 }
 
 /* Контейнеры */
 .wrapper {
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
+	min-height: 100vh;
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
 }
 
 .container {
-  max-width: var(--container-width);
-  padding: 0 var(--container-padding);
-  margin: 0 auto;
-  width: 100%;
+	max-width: var(--container-width);
+	padding: 0 var(--container-padding);
+	margin: 0 auto;
+	width: 100%;
 }
 
 .main {
-  flex: 1 0 auto;
+	flex: 1 0 auto;
 }
 
 .footer {
-  flex-shrink: 0;
+	flex-shrink: 0;
 }
 
 .logo {
@@ -54,97 +54,97 @@ body {
 
 /* повторяемые блоки */
 .button {
-  background: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
-  padding: 1rem 2.25rem;
-  border-radius: 4px;
+	background: linear-gradient(45deg, #ff3f3a 0%, #f75e05 100%);
+	padding: 1rem 2.25rem;
+	border-radius: 4px;
 
-  font-weight: 700;
-  letter-spacing: 0.03rem;
-  color: white;
+	font-weight: 700;
+	letter-spacing: 0.03rem;
+	color: white;
 
-  transition: .3s;
+	transition: 0.3s;
 }
 
 .button:hover {
-  transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 /* -------------- header -------------- */
 .header {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 /* header__top */
 .header__top {
-  width: 100%;
-  margin: 1.25rem 0;
-  height: 3.25rem;
+	width: 100%;
+	margin: 1.25rem 0;
+	height: 3.25rem;
 
-  white-space: nowrap;
+	white-space: nowrap;
 }
 
 .header__top-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .header__logo {
-  margin-right: 3.75rem;
+	margin-right: 3.75rem;
 }
 
 .header__nav {
-  margin-right: auto;
+	margin-right: auto;
 }
 
 .header__nav-list {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
+	display: flex;
+	align-items: center;
+	gap: 2.5rem;
 }
 
 .header__nav-item {
-  line-height: 1.6rem;
-  color: var(--gray-800);
+	line-height: 1.6rem;
+	color: var(--gray-800);
 }
 
 .header__nav-link {
-  transition: color .3s;
+	transition: color 0.3s;
 }
 
 .header__btn-box {
-  display: flex;
-  align-items: center;
-  gap: 2.25rem;
+	display: flex;
+	align-items: center;
+	gap: 2.25rem;
 }
 
 .header__consulation-button {
 }
 
 .header__user-container {
-  fill: var(--gray-800);
-  vertical-align: middle;
+	fill: var(--gray-800);
+	vertical-align: middle;
 }
 
 .header__user-container img {
-  margin-right: .625rem;
+	margin-right: 0.625rem;
 }
 
 .user-button {
-  line-height: 1.6rem;
-  color: var(--gray-800);
-  transition: color .3s;
+	line-height: 1.6rem;
+	color: var(--gray-800);
+	transition: color 0.3s;
 }
 
 .header__user-container img,
 .user-button,
 .header__user-container span {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 .header__nav-link:hover,
 .user-button:hover {
-  color: var(--primary);
+	color: var(--primary);
 }
 
 /* header__body */
